@@ -39,7 +39,14 @@ const Cards = ( { data: { confirmed, recovered, deaths, lastUpdate } } ) => {
 									duration={2.5}
 									separator=","
 								/>
-								) : 'No data in API'
+								) : (
+									<CountUp
+									start = {0}
+									end = {confirmed.value - deaths.value}
+									duration={2.5}
+									separator=","
+								/>
+								)
 							}
 
 						</Typography>
