@@ -4,9 +4,8 @@ import CountUp from 'react-countup';
 import cx from 'classnames';
 
 const Cards = ( { data: { confirmed, recovered, deaths, lastUpdate } } ) => {
-	console.log(recovered)
 	if (!confirmed) {
-		return 'Loading';
+		return 'Loading your info';
 	}
 	return (
 		<div className={styles.container}>
